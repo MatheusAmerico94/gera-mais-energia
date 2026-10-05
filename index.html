@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gera Mais Energia | Elétrica & Energia Solar Fotovoltaica em Sete Lagoas e Região</title>
+  <meta name="description" content="Engenharia elétrica e energia solar fotovoltaica com homologação Cemig em Sete Lagoas e região. Autonomia energética, segurança técnica e até 95% de economia na sua conta de luz.">
+  
+  <!-- Favicon com a logo oficial da Gera Mais Energia -->
+  <link rel="icon" type="image/png" href="assets/images/logo_clean.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              burgundy: '#34081e',
+              burgundyDark: '#1c0410',
+              burgundyLight: '#541234',
+              gold: '#f59e0b',
+              goldLight: '#fbbf24',
+              yellow: '#fde047',
+              dark: '#12030b',
+              card: '#1e0714',
+              border: '#45122b'
+            }
+          },
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            heading: ['Sora', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- CSS Customizado -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#12030b] text-slate-100 antialiased selection:bg-[#fde047] selection:text-slate-900">
+
+  <!-- =========================================================================
+       1. HEADER / NAVBAR (ESTÁTICO NO MOBILE, FIXO NO DESKTOP)
+       ========================================================================= -->
+  <header id="mainHeader" class="absolute md:fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#12030b]/95 md:bg-[#12030b]/90 md:backdrop-blur-md border-b border-brand-gold/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Oficial Gera Mais Energia -->
+      <a href="#inicio" class="flex items-center gap-3.5 group">
+        <img src="assets/images/logo_clean.png" alt="Gera Mais Energia Logo" class="w-11 h-11 rounded-full object-cover ring-2 ring-brand-gold/30 group-hover:ring-brand-gold transition-all duration-300 shadow-md">
+        <div class="flex flex-col">
+          <span class="font-heading font-black text-xl tracking-tight text-white flex items-center gap-1">
+            GERA <span class="text-brand-gold">+</span> ENERGIA
+          </span>
+          <span class="text-[10px] font-bold tracking-widest text-brand-gold uppercase">
+            ELÉTRICA &amp; SOLAR FOTOVOLTAICA
+          </span>
+        </div>
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#inicio" class="text-brand-yellow font-semibold transition-colors">Início</a>
+        <a href="#solucoes" class="text-slate-300 hover:text-white transition-colors">Soluções</a>
+        <a href="#diferenciais" class="text-slate-300 hover:text-white transition-colors">Engenharia</a>
+        <a href="#como-funciona" class="text-slate-300 hover:text-white transition-colors">Como Funciona</a>
+        <a href="#obras" class="text-slate-300 hover:text-white transition-colors">Obras</a>
+        <a href="#simulador" class="text-slate-300 hover:text-white transition-colors">Simulador</a>
+      </nav>
+
+      <!-- Botão CTA Desktop -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="https://wa.me/5531985558000?text=Ol%C3%A1%2C%20Gera%20Mais%20Energia!%20Gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20t%C3%A9cnica%20gratuita." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-full text-sm font-bold text-slate-950 bg-gradient-to-r from-brand-yellow via-brand-gold to-amber-500 hover:from-amber-300 hover:to-brand-gold transition-all duration-300 shadow-lg shadow-brand-gold/20 transform hover:-translate-y-0.5">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Falar no WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Botão Menu Mobile -->
+      <button id="mobileMenuBtn" aria-label="Abrir Menu" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2 rounded-lg bg-white/5">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Dropdown Mobile -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#1c0410] border-b border-brand-gold/20 px-6 py-6 space-y-4">
+      <a href="#inicio" class="block text-base font-semibold text-brand-yellow">Início</a>
+      <a href="#solucoes" class="block text-base font-medium text-slate-300 hover:text-white">Soluções</a>
+      <a href="#diferenciais" class="block text-base font-medium text-slate-300 hover:text-white">Engenharia Integrada</a>
+      <a href="#como-funciona" class="block text-base font-medium text-slate-300 hover:text-white">Como Funciona</a>
+      <a href="#obras" class="block text-base font-medium text-slate-300 hover:text-white">Obras Entregues</a>
+      <a href="#simulador" class="block text-base font-medium text-slate-300 hover:text-white">Simulador de Economia</a>
+      <div class="pt-4 border-t border-white/10">
+        <a href="https://wa.me/5531985558000?text=Ol%C3%A1%2C%20Gera%20Mais%20Energia!%20Gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20t%C3%A9cnica%20gratuita." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 w-full py-3 rounded-full text-sm font-bold text-slate-950 bg-gradient-to-r from-brand-yellow to-brand-gold shadow-md">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Solicitar Orçamento</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         2. HERO SECTION (SPLIT 55/45 COM FOTO NA LATERAL DIREITA)
+         ========================================================================= -->
+    <section id="inicio" class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+      <!-- Glow de fundo elegante -->
+      <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-burgundyLight/40 rounded-full blur-[128px] pointer-events-none"></div>
+      <div class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-brand-gold/10 rounded-full blur-[160px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Lado Esquerdo: Conteúdo Persuasivo (58%) -->
+          <div class="lg:col-span-7 text-left space-y-6">
+            
+            <!-- Badge de Especialidade e Região -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-brand-burgundy/80 border border-brand-gold/30 backdrop-blur-sm">
+              <span class="flex h-2.5 w-2.5 rounded-full bg-brand-yellow animate-ping"></span>
+              <span class="text-xs sm:text-sm font-bold text-brand-gold tracking-wide uppercase">
+                Atendimento Especializado • Sete Lagoas &amp; Região
+              </span>
+            </div>
+
+            <!-- Headline Imponente -->
+            <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black text-white leading-[1.15] tracking-tight">
+              Sua Empresa e Residência com <span class="text-gradient-gold">Autonomia Energética</span> e Engenharia Integrada.
+            </h1>
+
+            <!-- Subtítulo comercial claro -->
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
+              Projetos solares completos e serviços de engenharia elétrica de alta precisão. Reduza até <strong>95% da conta de luz</strong> com homologação Cemig ágil, máxima segurança e retorno garantido sobre o seu investimento.
+            </p>
+
+            <!-- Bullets de Diferenciais Rápidos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="flex items-center gap-3 text-slate-200 text-sm font-medium">
+                <div class="w-6 h-6 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-yellow shrink-0">
+                  <i class="fa-solid fa-bolt text-xs"></i>
+                </div>
+                <span>Elétrica + Solar Fotovoltaica</span>
+              </div>
+              <div class="flex items-center gap-3 text-slate-200 text-sm font-medium">
+                <div class="w-6 h-6 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-yellow shrink-0">
+                  <i class="fa-solid fa-file-contract text-xs"></i>
+                </div>
+                <span>100% Homologado na Cemig</span>
+              </div>
+              <div class="flex items-center gap-3 text-slate-200 text-sm font-medium">
+                <div class="w-6 h-6 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-yellow shrink-0">
+                  <i class="fa-solid fa-shield-halved text-xs"></i>
+                </div>
+                <span>Módulos com 25 Anos de Garantia</span>
+              </div>
+              <div class="flex items-center gap-3 text-slate-200 text-sm font-medium">
+                <div class="w-6 h-6 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-yellow shrink-0">
+                  <i class="fa-solid fa-mobile-screen-button text-xs"></i>
+                </div>
+                <span>Monitoramento em Tempo Real via App</span>
+              </div>
+            </div>
+
+            <!-- Botões de Ação Principais -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+              <a href="#simulador" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-brand-yellow via-brand-gold to-amber-500 hover:from-amber-300 hover:to-brand-gold transition-all duration-300 shadow-xl shadow-brand-gold/25 transform hover:-translate-y-0.5 text-base">
+                <i class="fa-solid fa-calculator text-lg"></i>
+                <span>Simular Minha Economia</span>
+              </a>
+              <a href="https://wa.me/5531985558000?text=Ol%C3%A1%2C%20Gera%20Mais%20Energia!%20Gostaria%20de%20conversar%20com%20um%20especialista%20sobre%20energia%20solar." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl font-bold text-white bg-brand-burgundy/90 hover:bg-brand-burgundyLight border border-brand-gold/40 transition-all duration-300 text-base">
+                <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+                <span>Falar com Especialista</span>
+              </a>
+            </div>
+
+            <!-- Prova Social no Hero -->
+            <div class="flex items-center gap-4 pt-2 border-t border-white/10 text-xs sm:text-sm text-slate-400">
+              <div class="flex text-brand-gold text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span>Referência técnica em Minas Gerais com padrão de engenharia certificado.</span>
+            </div>
+
+          </div>
+
+          <!-- Lado Direito: Card Fotográfico Split (42%) -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <!-- Moldura decorativa de gradiente -->
+              <div class="absolute -inset-1.5 bg-gradient-to-tr from-brand-gold via-brand-burgundy to-brand-yellow rounded-3xl blur-md opacity-40"></div>
+              
+              <div class="relative rounded-2xl overflow-hidden bg-brand-card border border-brand-gold/30 shadow-2xl">
+                <img src="assets/images/photo_hero.jpg" alt="Instalação Fotovoltaica e Engenharia Técnica Gera Mais Energia" class="w-full h-[440px] sm:h-[480px] object-cover object-center transform hover:scale-105 transition-transform duration-700">
+                
+                <!-- Gradiente sobreposto para legibilidade -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#12030b] via-transparent to-black/20"></div>
+
+                <!-- Tag Flutuante Superior -->
+                <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-brand-gold/30 text-xs font-bold text-white shadow-lg">
+                  <i class="fa-solid fa-certificate text-brand-yellow"></i>
+                  <span>Equipe Técnica Própria</span>
+                </div>
+
+                <!-- Card de Informações Inferior -->
+                <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-brand-burgundyDark/90 backdrop-blur-md border border-brand-gold/20 shadow-xl space-y-1">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Segurança &amp; Performance</span>
+                    <span class="text-xs font-semibold text-emerald-400 flex items-center gap-1">
+                      <i class="fa-solid fa-circle-check"></i> NR-10 &amp; NR-35
+                    </span>
+                  </div>
+                  <p class="text-sm font-bold text-white">Engenharia Fotovoltaica Residencial, Comercial e Rural</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. STATS STRIP / NÚMEROS DE IMPACTO
+         ========================================================================= -->
+    <section class="py-10 bg-brand-burgundyDark border-y border-brand-gold/20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          
+          <div class="space-y-1">
+            <div class="font-heading text-3xl sm:text-4xl font-black text-brand-yellow">3.500+</div>
+            <p class="text-xs sm:text-sm font-medium text-slate-300">Módulos Instalados e Ativos</p>
+          </div>
+
+          <div class="space-y-1">
+            <div class="font-heading text-3xl sm:text-4xl font-black text-white">100%</div>
+            <p class="text-xs sm:text-sm font-medium text-slate-300">Projetos com Homologação Cemig</p>
+          </div>
+
+          <div class="space-y-1">
+            <div class="font-heading text-3xl sm:text-4xl font-black text-brand-gold">NR-10/35</div>
+            <p class="text-xs sm:text-sm font-medium text-slate-300">Conformidade e Segurança Rigorosa</p>
+          </div>
+
+          <div class="space-y-1">
+            <div class="font-heading text-3xl sm:text-4xl font-black text-white">25 Anos</div>
+            <p class="text-xs sm:text-sm font-medium text-slate-300">Garantia Linear de Fabricante</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. SEÇÃO DE SOLUÇÕES & SERVIÇOS (COM FOTOS REAIS EM TODOS OS CARDS)
+         ========================================================================= -->
+    <section id="solucoes" class="py-20 md:py-28 bg-[#12030b] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-burgundy border border-brand-gold/30 text-xs font-bold text-brand-gold uppercase tracking-wider">
+            Soluções Sob Medida
+          </div>
+          <h2 class="font-heading text-3xl sm:text-4xl lg:text-4xl font-black text-white">
+            Soluções Especializadas em Elétrica &amp; Fotovoltaica
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg">
+            Da residência ao agronegócio, desenvolvemos soluções completas focadas em máxima rentabilidade e eficiência técnica comprovada.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Card 1: Residencial -->
+          <div class="rounded-2xl overflow-hidden bg-brand-card border border-white/10 hover:border-brand-gold/50 transition-all duration-300 group flex flex-col shadow-lg">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/photo_residential.jpg" alt="Energia Solar Residencial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-black/20 to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-black/70 backdrop-blur-md text-[11px] font-bold text-brand-yellow uppercase tracking-wide border border-white/10">
+                Residencial
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-white mb-2 group-hover:text-brand-yellow transition-colors">
+                  Sistemas Residenciais
+                </h3>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  Elimine o peso das faturas mensais, valorize seu imóvel e aproveite ar-condicionado e piscina sem culpa.
+                </p>
+              </div>
+              <ul class="text-xs text-slate-400 space-y-2 border-t border-white/5 pt-4">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Até 95% de economia mensal</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Estética integrada ao telhado</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Monitoramento no celular</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2: Comercial -->
+          <div class="rounded-2xl overflow-hidden bg-brand-card border border-white/10 hover:border-brand-gold/50 transition-all duration-300 group flex flex-col shadow-lg">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/photo_service_commercial.jpg" alt="Energia Solar Comercial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-black/20 to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-black/70 backdrop-blur-md text-[11px] font-bold text-brand-yellow uppercase tracking-wide border border-white/10">
+                Comercial
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-white mb-2 group-hover:text-brand-yellow transition-colors">
+                  Comércio &amp; Serviços
+                </h3>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  Transforme um custo fixo pesado em lucro líquido para expandir sua empresa e ganhar vantagem sobre concorrentes.
+                </p>
+              </div>
+              <ul class="text-xs text-slate-400 space-y-2 border-t border-white/5 pt-4">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Redução expressiva no fluxo de caixa</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Payback acelerado em meses</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Linhas de crédito facilitadas</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3: Usinas & Indústria -->
+          <div class="rounded-2xl overflow-hidden bg-brand-card border border-white/10 hover:border-brand-gold/50 transition-all duration-300 group flex flex-col shadow-lg">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/photo_commercial.jpg" alt="Usinas para Galpões e Indústrias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-black/20 to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-black/70 backdrop-blur-md text-[11px] font-bold text-brand-yellow uppercase tracking-wide border border-white/10">
+                Industrial
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-white mb-2 group-hover:text-brand-yellow transition-colors">
+                  Usinas &amp; Galpões
+                </h3>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  Projetos de média e alta potência com dimensionamento elétrico robusto para operações fabris contínuas.
+                </p>
+              </div>
+              <ul class="text-xs text-slate-400 space-y-2 border-t border-white/5 pt-4">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Engenharia e cabine primária</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Alta estabilidade operacional</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Eficiência em larga escala</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 4: Rural & Agro -->
+          <div class="rounded-2xl overflow-hidden bg-brand-card border border-white/10 hover:border-brand-gold/50 transition-all duration-300 group flex flex-col shadow-lg">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/images/photo_service_rural.jpg" alt="Energia Solar Rural e Agro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-black/20 to-transparent"></div>
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-black/70 backdrop-blur-md text-[11px] font-bold text-brand-yellow uppercase tracking-wide border border-white/10">
+                Agronegócio
+              </span>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-white mb-2 group-hover:text-brand-yellow transition-colors">
+                  Usinas Rurais &amp; Agro
+                </h3>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                  Autonomia para pivôs de irrigação, granjas, ordenhas mecânicas e sede de fazenda com máxima blindagem tarifária.
+                </p>
+              </div>
+              <ul class="text-xs text-slate-400 space-y-2 border-t border-white/5 pt-4">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Solo ou cobertura de galpões</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Créditos compartilhados para outras contas</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-gold"></i> Resistência a intempéries</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. PASSO A PASSO / PROCESSO TRANSPARENTE
+         ========================================================================= -->
+    <section id="como-funciona" class="py-20 bg-brand-burgundyDark border-y border-white/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-burgundy border border-brand-gold/30 text-xs font-bold text-brand-gold uppercase tracking-wider">
+            Processo Descomplicado
+          </div>
+          <h2 class="font-heading text-3xl sm:text-4xl font-black text-white">
+            Como Implementamos seu Projeto do Zero à Cemig
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base">
+            Cuidamos de 100% das etapas técnicas, burocráticas e práticas. Você só acompanha e começa a economizar.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="p-8 rounded-2xl bg-brand-card border border-brand-gold/20 relative shadow-xl">
+            <span class="font-heading text-5xl font-black text-brand-gold/20 absolute top-6 right-6">01</span>
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-yellow text-xl mb-6">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-white mb-3">Diagnóstico &amp; Análise Técnica</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Avaliamos o histórico de consumo da sua conta, a irradiação solar do telhado ou terreno e projetamos a potência ideal exata.
+            </p>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-brand-card border border-brand-gold/20 relative shadow-xl">
+            <span class="font-heading text-5xl font-black text-brand-gold/20 absolute top-6 right-6">02</span>
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-yellow text-xl mb-6">
+              <i class="fa-solid fa-file-signature"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-white mb-3">Projeto de Engenharia &amp; ART</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Elaboração completa do projeto elétrico, emissão de Anotação de Responsabilidade Técnica (ART) e aprovação junto à Cemig.
+            </p>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-brand-card border border-brand-gold/20 relative shadow-xl">
+            <span class="font-heading text-5xl font-black text-brand-gold/20 absolute top-6 right-6">03</span>
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-yellow text-xl mb-6">
+              <i class="fa-solid fa-solar-panel"></i>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-white mb-3">Instalação &amp; Ativação</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Montagem ágil por equipe qualificada dentro das normas NR-10 e NR-35, vistoria final, troca do medidor e liberação do app.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. PROJETOS E OBRAS ENTREGUES (FOTOS REAIS E SEM REPETIÇÃO)
+         ========================================================================= -->
+    <section id="obras" class="py-20 md:py-28 bg-[#12030b] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div class="space-y-4 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-burgundy border border-brand-gold/30 text-xs font-bold text-brand-gold uppercase tracking-wider">
+              Portfólio em Campo
+            </div>
+            <h2 class="font-heading text-3xl sm:text-4xl font-black text-white">
+              Usinas &amp; Instalações Entregues na Região
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base">
+              Veja instalações reais executadas com padrão de acabamento impecável e alta produtividade de geração.
+            </p>
+          </div>
+          <div>
+            <a href="https://wa.me/5531985558000?text=Ol%C3%A1%2C%20Gera%20Mais%20Energia!%20Gostaria%20de%20ver%20mais%20fotos%20de%20projetos%20entregues%20na%20minha%20regi%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-brand-yellow hover:text-white transition-colors">
+              <span>Ver mais fotos no WhatsApp</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Obra 1: Usina Solo / Rural -->
+          <div class="rounded-2xl overflow-hidden bg-brand-card border border-white/10 group shadow-xl">
+            <div class="relative h-72 overflow-hidden">
+              <img src="assets/images/photo_rural.jpg" alt="Usina Fotovoltaica de Solo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                <div>
+                  <span class="text-xs font-bold text-brand-yellow uppercase tracking-wider block">Sete Lagoas / Região</span>
+                  <h4 class="font-heading font-bold text-lg text-white">Usina de Solo de Alta Eficiência</h4>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-yellow text-xs font-bold backdrop-blur-sm border border-brand-gold/30">
+                  Agro &amp; Comercial
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Obra 2: Subestação e Inversores Elétricos -->
+          <div class="rounded-2xl overflow-hidden bg-brand-card border border-white/10 group shadow-xl">
+            <div class="relative h-72 overflow-hidden">
+              <img src="assets/images/photo_electrical.jpg" alt="Quadro Geral e Inversores de Alta Tensão" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+                <div>
+                  <span class="text-xs font-bold text-brand-yellow uppercase tracking-wider block">Infraestrutura Elétrica</span>
+                  <h4 class="font-heading font-bold text-lg text-white">Central de Inversores e Proteção Técnica</h4>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-yellow text-xs font-bold backdrop-blur-sm border border-brand-gold/30">
+                  Engenharia Própria
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. AUTORIDADE TÉCNICA & ENGENHARIA INTEGRADA
+         ========================================================================= -->
+    <section id="diferenciais" class="py-20 bg-brand-burgundyDark border-y border-brand-gold/20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-burgundy border border-brand-gold/30 text-xs font-bold text-brand-gold uppercase tracking-wider">
+              Confiabilidade Máxima
+            </div>
+            <h2 class="font-heading text-3xl sm:text-4xl font-black text-white leading-tight">
+              Engenharia Especializada que Protege seu Investimento
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Diferente de instaladores puramente comerciais, a <strong>Gera Mais Energia</strong> tem como pilar a sólida engenharia elétrica. Cada conector, cada disjuntor e cada string são calculados rigorosamente para operar em máxima segurança ao longo dos anos.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/10 text-center">
+              <div class="p-4 rounded-xl bg-brand-card border border-white/5">
+                <div class="font-heading text-2xl font-bold text-brand-yellow">+15</div>
+                <div class="text-xs text-slate-300 mt-1">Cidades Atendidas</div>
+              </div>
+              <div class="p-4 rounded-xl bg-brand-card border border-white/5">
+                <div class="font-heading text-2xl font-bold text-white">100% ART</div>
+                <div class="text-xs text-slate-300 mt-1">Responsabilidade Técnica</div>
+              </div>
+              <div class="p-4 rounded-xl bg-brand-card border border-white/5">
+                <div class="font-heading text-2xl font-bold text-brand-gold">25 Anos</div>
+                <div class="text-xs text-slate-300 mt-1">Vida Útil Superior</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="relative rounded-2xl overflow-hidden border border-brand-gold/30 shadow-2xl">
+              <img src="assets/images/photo_auth_engineer.jpg" alt="Engenheiro e Técnico em Campo Gera Mais Energia" class="w-full h-[400px] object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <p class="text-xs font-bold uppercase tracking-wider text-brand-gold">Padrão Rigoroso de Homologação</p>
+                <h4 class="font-heading font-bold text-xl text-white">Supervisão técnica contínua em cada projeto</h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. SIMULADOR DE ECONOMIA E FORMULÁRIO DE CAPTURA DE LEADS
+         ========================================================================= -->
+    <section id="simulador" class="py-20 md:py-28 bg-[#12030b] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-burgundy border border-brand-gold/30 text-xs font-bold text-brand-gold uppercase tracking-wider">
+            Cálculo Imediato
+          </div>
+          <h2 class="font-heading text-3xl sm:text-4xl font-black text-white">
+            Descubra Quanto Você Pode Economizar
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base">
+            Arraste o valor médio da sua conta de energia atual e veja a estimativa real de rentabilidade.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Calculadora Interativa (7 cols) -->
+          <div class="lg:col-span-7 p-8 rounded-3xl bg-brand-card border border-brand-gold/30 shadow-2xl space-y-8">
+            
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <label for="billRange" class="text-sm font-bold text-slate-200 uppercase tracking-wider">Sua Conta de Luz Média:</label>
+                <span id="billValueDisplay" class="font-heading text-3xl font-black text-brand-yellow">R$ 800</span>
+              </div>
+              <input id="billRange" type="range" min="200" max="15000" step="50" value="800" class="w-full h-3 bg-brand-burgundy rounded-lg appearance-none cursor-pointer accent-brand-gold">
+              <div class="flex justify-between text-xs text-slate-400">
+                <span>R$ 200</span>
+                <span>R$ 5.000</span>
+                <span>R$ 15.000+</span>
+              </div>
+            </div>
+
+            <!-- Seleção de Segmento -->
+            <div>
+              <label for="simType" class="text-xs font-bold text-slate-300 block mb-2 uppercase tracking-wide">Tipo de Imóvel:</label>
+              <select id="simType" class="w-full bg-brand-burgundyDark border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold">
+                <option value="minha residência">Residencial (Casa / Sobrado / Condomínio)</option>
+                <option value="meu comércio">Comercial (Loja / Clínica / Escritório / Restaurante)</option>
+                <option value="minha indústria">Industrial / Galpão</option>
+                <option value="minha propriedade rural">Rural / Sítio / Fazenda</option>
+              </select>
+            </div>
+
+            <!-- Cards de Economia Estimada -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/10">
+              <div class="p-4 rounded-2xl bg-brand-burgundyDark border border-white/5 text-center">
+                <span class="text-xs text-slate-400 block mb-1">Economia Mensal</span>
+                <span id="monthlySavings" class="font-heading text-xl font-bold text-emerald-400">R$ 744 /mês</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-brand-burgundyDark border border-white/5 text-center">
+                <span class="text-xs text-slate-400 block mb-1">Economia em 1 Ano</span>
+                <span id="annualSavings" class="font-heading text-xl font-bold text-brand-yellow">R$ 8.928</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-brand-burgundyDark border border-white/5 text-center">
+                <span class="text-xs text-slate-400 block mb-1">Retorno em 25 Anos</span>
+                <span id="twentyFiveYears" class="font-heading text-xl font-bold text-brand-gold">R$ 232.128</span>
+              </div>
+            </div>
+
+            <a id="simWhatsappBtn" href="https://wa.me/5531985558000?text=Ol%C3%A1%2C%20Gera%20Mais%20Energia!%20Simulei%20minha%20economia%20no%20site%20e%20gostaria%20de%20receber%20a%20proposta." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-3 py-4 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-brand-yellow to-brand-gold hover:from-amber-300 hover:to-brand-gold transition-all duration-300 shadow-xl shadow-brand-gold/20 text-base">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span>Receber Estudo Técnico Gratuito pelo WhatsApp</span>
+            </a>
+
+          </div>
+
+          <!-- Formulário Rápido de Contato (5 cols) -->
+          <div class="lg:col-span-5 p-8 rounded-3xl bg-brand-card border border-white/10 shadow-xl space-y-6">
+            <div>
+              <h3 class="font-heading font-bold text-2xl text-white mb-2">Solicitar Orçamento Rápido</h3>
+              <p class="text-xs sm:text-sm text-slate-300">
+                Preencha os campos abaixo para que nossa equipe monte seu estudo de viabilidade sem qualquer custo.
+              </p>
+            </div>
+
+            <form id="leadContactForm" class="space-y-4">
+              <div>
+                <label for="leadName" class="text-xs font-semibold text-slate-300 block mb-1.5">Seu Nome ou Nome da Empresa</label>
+                <input id="leadName" type="text" required placeholder="Ex: Roberto Silva" class="w-full bg-brand-burgundyDark border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-gold">
+              </div>
+
+              <div>
+                <label for="leadPhone" class="text-xs font-semibold text-slate-300 block mb-1.5">WhatsApp / Telefone com DDD</label>
+                <input id="leadPhone" type="tel" required placeholder="(31) 99999-9999" class="w-full bg-brand-burgundyDark border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-gold">
+              </div>
+
+              <div>
+                <label for="leadCity" class="text-xs font-semibold text-slate-300 block mb-1.5">Cidade do Imóvel</label>
+                <input id="leadCity" type="text" value="Sete Lagoas - MG" class="w-full bg-brand-burgundyDark border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-gold">
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-xl font-bold text-white bg-brand-burgundy hover:bg-brand-burgundyLight border border-brand-gold/40 transition-all duration-300 shadow-lg text-sm flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane text-brand-yellow"></i>
+                <span>Enviar Solicitação Direta</span>
+              </button>
+            </form>
+
+            <div class="text-[11px] text-slate-400 text-center flex items-center justify-center gap-2">
+              <i class="fa-solid fa-lock text-brand-gold"></i>
+              <span>Seus dados estão protegidos. Não enviamos spam.</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       9. RODAPÉ INSTITUCIONAL COMPLETO
+       ========================================================================= -->
+  <footer class="bg-brand-burgundyDark border-t border-brand-gold/20 pt-16 pb-12 text-slate-300 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Coluna 1: Sobre -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/logo_clean.png" alt="Gera Mais Energia" class="w-10 h-10 rounded-full">
+            <span class="font-heading font-black text-lg text-white">GERA + ENERGIA</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Especialistas em projetos elétricos e sistemas de energia solar fotovoltaica para residências, comércios, indústrias e áreas rurais em Sete Lagoas e região.
+          </p>
+          <div class="flex items-center gap-3 text-brand-gold text-base pt-2">
+            <a href="https://www.instagram.com/geramaisenergia7l/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-slate-950 transition-all">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5531985558000" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-slate-950 transition-all">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Navegação -->
+        <div class="space-y-3">
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider">Navegação</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#inicio" class="hover:text-white transition-colors">Início</a></li>
+            <li><a href="#solucoes" class="hover:text-white transition-colors">Soluções Solares</a></li>
+            <li><a href="#diferenciais" class="hover:text-white transition-colors">Engenharia Integrada</a></li>
+            <li><a href="#como-funciona" class="hover:text-white transition-colors">Etapas do Projeto</a></li>
+            <li><a href="#obras" class="hover:text-white transition-colors">Obras Entregues</a></li>
+            <li><a href="#simulador" class="hover:text-white transition-colors">Simulador</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Soluções -->
+        <div class="space-y-3">
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider">Soluções</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><span class="hover:text-white">Energia Solar Residencial</span></li>
+            <li><span class="hover:text-white">Energia Solar Comercial</span></li>
+            <li><span class="hover:text-white">Usinas Industriais &amp; Galpões</span></li>
+            <li><span class="hover:text-white">Usinas Rurais &amp; Agronegócio</span></li>
+            <li><span class="hover:text-white">Homologação Cemig &amp; ART</span></li>
+            <li><span class="hover:text-white">Projetos de Engenharia Elétrica</span></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Contatos e Região -->
+        <div class="space-y-3">
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider">Atendimento</h4>
+          <ul class="space-y-3 text-xs text-slate-400">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot text-brand-gold mt-0.5"></i>
+              <span>Sete Lagoas - Minas Gerais e Cidades Vizinhas</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-brands fa-instagram text-brand-gold"></i>
+              <a href="https://www.instagram.com/geramaisenergia7l/" target="_blank" rel="noopener noreferrer" class="hover:text-white">@geramaisenergia7l</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-brands fa-whatsapp text-brand-gold"></i>
+              <a href="https://wa.me/5531985558000" target="_blank" rel="noopener noreferrer" class="hover:text-white">Fale conosco no WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Linha final de copyright -->
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>&copy; 2026 Gera Mais Energia. Todos os direitos reservados. CNPJ e responsabilidade técnica credenciada.</p>
+        <p class="text-brand-gold/80">Elétrica &amp; Energia Solar Fotovoltaica</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante do WhatsApp -->
+  <a href="https://wa.me/5531985558000?text=Ol%C3%A1%2C%20Gera%20Mais%20Energia!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-all duration-300">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Script principal -->
+  <script src="js/main.js"></script>
+</body>
+</html>
